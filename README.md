@@ -15,3 +15,8 @@ It's using [Snap.svg](http://snapsvg.io/) and it's build on middleman. But if yo
   * [Image Source](https://unsplash.com/)
   * [Map Source](https://en.wikipedia.org/wiki/Guiyang)
 
+### To Do List
+  * [ ] Optimize SVG file
+  * [x] ~~Add loading for SVG file~~
+  
+  

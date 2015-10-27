@@ -52,6 +52,22 @@
         top: 525px
         right: 300px
 
+.map-loading-layout
+    min-height: 500px
+
+.map-loading-widget
+    position: absolute
+    top: 50%
+    left: 50%
+    +transform(translate(-50%, -50%))
+
+.thumbnail-popup
+    +transition(box-shadow,300ms,ease-out)
+    &:focus,
+    &:hover
+        +box-shadow(0 0 8px rgba(0,0,0,0.18),0 8px 16px rgba(0,0,0,0.36))
+        +transition(box-shadow,300ms,ease-in)
+
 .img-invert
     +animation-duration(1s)
     +animation-direction(alternate)
@@ -63,10 +79,3 @@
         +filter(brightness(1000%))
     100%
         +filter(brightness(100%))
-
-.thumbnail-popup
-    +transition(box-shadow,300ms,ease-out)
-    &:focus,
-    &:hover
-        +box-shadow(0 0 8px rgba(0,0,0,0.18),0 8px 16px rgba(0,0,0,0.36))
-        +transition(box-shadow,300ms,ease-in)
