@@ -19,6 +19,9 @@
           %p
             =link_to 'Map Source - ', 'https://en.wikipedia.org/wiki/Guiyang'
             =link_to 'Image Source', 'https://unsplash.com/'
-    .col-lg-6
+    .col-lg-6.js-map-loading.map-loading-layout
+      .map-loading-widget
+        %i.fa.fa-spinner.fa-pulse.fa-2x
+    .col-lg-6.js-map-layout.hidden
       %i.fa.fa-map-marker.fa-3x.map-marker.js-map-marker{'data-city':''}
       %svg.svg-map#svg
