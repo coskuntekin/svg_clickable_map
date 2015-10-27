@@ -1,0 +1,136 @@
+body {
+  background-color: #ddd;
+}
+
+.svg-map {
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0; }
+
+.map-marker {
+  position: absolute;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transform: translate3d(0, -100px, 0);
+  -ms-transform: translate3d(0, -100px, 0);
+  -webkit-transform: translate3d(0, -100px, 0);
+  transform: translate3d(0, -100px, 0);
+  z-index: 2;
+  color: #A94442;
+  -moz-transition: -moz-transform, 100ms, ease-in, position, 100ms, linear;
+  -o-transition: -o-transform, 100ms, ease-in, position, 100ms, linear;
+  -webkit-transition: -webkit-transform, 100ms, ease-in, position, 100ms, linear;
+  transition: transform, 100ms, ease-in, position, 100ms, linear;
+}
+
+.map-marker.active {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -moz-transition: -moz-transform, 500ms, ease-out, position, 500ms, linear;
+  -o-transition: -o-transform, 500ms, ease-out, position, 500ms, linear;
+  -webkit-transition: -webkit-transform, 500ms, ease-out, position, 500ms, linear;
+  transition: transform, 500ms, ease-out, position, 500ms, linear;
+}
+
+.map-marker[data-city='xiuwen'] {
+  top: 220px;
+  right: 350px;
+}
+.map-marker[data-city='xifeng'] {
+  top: 110px;
+  right: 310px;
+}
+.map-marker[data-city='kaiyang'] {
+  top: 120px;
+  right: 150px;
+}
+.map-marker[data-city='wudang'] {
+  top: 310px;
+  right: 190px;
+}
+.map-marker[data-city='qingzhen'] {
+  top: 340px;
+  right: 450px;
+}
+.map-marker[data-city='baiyun'] {
+  top: 335px;
+  right: 295px;
+}
+.map-marker[data-city='guanshanhu'] {
+  top: 390px;
+  right: 350px;
+}
+.map-marker[data-city='yunyan'] {
+  top: 420px;
+  right: 275px;
+}
+.map-marker[data-city='nanming'] {
+  top: 450px;
+  right: 248px;
+}
+.map-marker[data-city='huaxi'] {
+  top: 525px;
+  right: 300px;
+}
+
+.img-invert {
+  -moz-animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -moz-animation-direction: alternate;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+.img-invert.animate-name {
+  -moz-animation-name: imgInvert;
+  -webkit-animation-name: imgInvert;
+  animation-name: imgInvert;
+}
+
+@-moz-keyframes imgInvert {
+  0% {
+    filter: brightness(1000%); }
+  100% {
+    filter: brightness(100%); }
+}
+
+@-webkit-keyframes imgInvert {
+  0% {
+    -webkit-filter: brightness(1000%);
+    filter: brightness(1000%); }
+  100% {
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%); }
+}
+
+@keyframes imgInvert {
+  0% {
+    -webkit-filter: brightness(1000%);
+    filter: brightness(1000%); }
+  100% {
+    -webkit-filter: brightness(100%);
+    filter: brightness(100%); }
+}
+
+.thumbnail-popup {
+  -moz-transition: box-shadow, 300ms, ease-out;
+  -o-transition: box-shadow, 300ms, ease-out;
+  -webkit-transition: box-shadow, 300ms, ease-out;
+  transition: box-shadow, 300ms, ease-out;
+}
+
+.thumbnail-popup:focus, .thumbnail-popup:hover {
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36);
+  -moz-transition: box-shadow, 300ms, ease-in;
+  -o-transition: box-shadow, 300ms, ease-in;
+  -webkit-transition: box-shadow, 300ms, ease-in;
+  transition: box-shadow, 300ms, ease-in;
+}
