@@ -1,23 +1,23 @@
 /* TEAM */
 
+    Twitter: @coskuntekin
+    Github: http://github.com/coskuntekin
 
 /* THANKS */
 
     Ruby
-    Node.Js
     Middleman
     HTML5 Bolireplate
     HAML
     Sass
-    Susy
     Compass
     Modernizr
     jQuery
-    GIT
+    Snap.svg
 
 /* SITE */
 
-    Last Update: YYYY/MM/DD
+    Last Update: 2015/10/27
     Doctype: HTML5
     IDE: RubyMine
     Platform: Middleman - Ruby

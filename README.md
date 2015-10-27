@@ -1,24 +1,17 @@
-### Middleman Start kit Template
-Middleman starter kit template created for middleman front-end development.
-If you wonder about middleman please [check out here](https://middlemanapp.com/)
+### SVG Clickable Map
+It's interactive SVG map.
+
+### Where is Guiyang?
+You can check [here](https://en.wikipedia.org/wiki/Guiyang)
 
 ### What's Include
-Middleman start kit template basically build on HTML5 Boilerplate front-end
-template. Ready to use Rails assets file structure, Sass file structure, HAML,
-Coffee Script, Sass, Susy, Compass.
+It's using [Snap.svg](http://snapsvg.io/) and it's build on middleman. But if you want only HTML version please check `gh-pages` branch.
 
-##### Thirty Part Includes
-- jQuery
-- Modernizr
-- Normalize
-- Twitter Bootstrap
-- Font Awesome
-- Middleman Sitemap
-- Middleman Smusher
+  * HAML
+  * Sass
+  * Bootstrap
+  * Snap.svg
+  * jQuery
+  * [Image Source](https://unsplash.com/)
+  * [Map Source](https://en.wikipedia.org/wiki/Guiyang)
 
-### Quick start
-Clone the git repo `git clone https://github.com/coskuntekin/middleman-starter-kit.git`
-
-### License
-The code is available under the
-[MIT license](https://github.com/coskuntekin/middleman-starter-kit/blob/master/LICENSE).
