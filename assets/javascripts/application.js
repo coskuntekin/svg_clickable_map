@@ -31,6 +31,13 @@ $(window).load(function(){
 	});
 
 	Snap.load("assets/images/guiyang.svg", function (f) {
+
+		//
+		//#### Map Loading Function
+		//----------------------------
+		$('.js-map-layout').removeClass('hidden');
+		$('.js-map-loading').addClass('hidden');
+
 		g.append(f);
 
 		var jsMapPin = $('.js-map-marker');

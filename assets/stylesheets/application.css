@@ -37,6 +37,20 @@ body {
   transition: transform, 500ms, ease-out, position, 500ms, linear;
 }
 
+.map-loading-layout {
+  min-height: 500px;
+}
+
+.map-loading-widget {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 .map-marker[data-city='xiuwen'] {
   top: 220px;
   right: 350px;
