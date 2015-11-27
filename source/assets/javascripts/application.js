@@ -27,7 +27,7 @@ $(window).load(function(){
 
 	var g = Snap('#svg');
 	g.attr({
-		viewBox: [0, 0, 750, 980]
+		viewBox: [-2, 0, 14, 14]
 	});
 
 	Snap.load("assets/images/guiyang.svg", function (f) {
@@ -74,11 +74,6 @@ $(window).load(function(){
 			fill: '#B3E5FC'
 		}, 1100);
 
-		var xiuwenTxt = g.text(230, 390, "修文县").attr({
-			fontSize: "30px",
-			fill: "#333"
-		});
-
 		xiuwenPath.click(function () {
 			active = 1;
 			if (active === 1) {
@@ -123,11 +118,6 @@ $(window).load(function(){
 		//----------------------------
 
 		var xifengPath = g.select("#xifeng");
-
-		var xifengTxt = g.text(280, 230, "息烽县").attr({
-			fontSize: "30px",
-			fill: "#333"
-		});
 
 		xifengPath.click(function () {
 			active = 2;
@@ -178,11 +168,6 @@ $(window).load(function(){
 
 		var kaiyangPath = g.select("#kaiyang");
 
-		var kaiyangTxt = g.text(500, 250, "开阳县").attr({
-			fontSize: "30px",
-			fill: "#333"
-		});
-
 		kaiyangPath.click(function () {
 			active = 3;
 			if (active === 3) {
@@ -231,11 +216,6 @@ $(window).load(function(){
 		//----------------------------
 
 		var wudangPath = g.select("#wudang");
-
-		var wudangTxt = g.text(450, 500, "乌当区").attr({
-			fontSize: "30px",
-			fill: "#333"
-		});
 
 		mapPathClick(wudangPath, 'wudang');
 
@@ -286,11 +266,6 @@ $(window).load(function(){
 
 		var qingzhenPath = g.select("#qingzhen");
 
-		var qingzhenTxt = g.text(80, 550, "清镇市").attr({
-			fontSize: "30px",
-			fill: "#333"
-		});
-
 		mapPathClick(qingzhenPath, 'qingzhen');
 
 		qingzhenPath.animate({
@@ -339,11 +314,6 @@ $(window).load(function(){
 		//----------------------------
 
 		var baiyunPath = g.select("#baiyun");
-
-		var baiyunTxt = g.text(315, 530, "白云区").attr({
-			fontSize: "25px",
-			fill: "#333"
-		});
 
 		mapPathClick(baiyunPath, 'baiyun');
 
@@ -394,11 +364,6 @@ $(window).load(function(){
 
 		var guanshanhuPath = g.select("#guanshanhu");
 
-		var guanshanhuTxt = g.text(250, 610, "观山湖区").attr({
-			fontSize: "20px",
-			fill: "#333"
-		});
-
 		mapPathClick(guanshanhuPath, 'guanshanhu');
 
 		guanshanhuPath.animate({
@@ -447,11 +412,6 @@ $(window).load(function(){
 		//----------------------------
 
 		var yunyanPath = g.select("#yunyan");
-
-		var yunyanTxt = g.text(358, 640, "云岩区	").attr({
-			fontSize: "15px",
-			fill: "#333"
-		});
 
 		mapPathClick(yunyanPath, 'yunyan');
 
@@ -502,11 +462,6 @@ $(window).load(function(){
 
 		var nanmingPath = g.select("#nanming");
 
-		var nanmingTxt = g.text(390, 680, "云岩区	").attr({
-			fontSize: "20px",
-			fill: "#333"
-		});
-
 		mapPathClick(nanmingPath, 'nanming');
 
 		nanmingPath.animate({
@@ -555,11 +510,6 @@ $(window).load(function(){
 		//----------------------------
 
 		var huaxiPath = g.select("#huaxi");
-
-		var huaxiTxt = g.text(300, 800, "花溪区").attr({
-			fontSize: "30px",
-			fill: "#333"
-		});
 
 		huaxiPath.click(function () {
 			active = 10;

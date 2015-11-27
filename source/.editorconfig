@@ -16,7 +16,7 @@ i# EditorConfig is awesome: http://EditorConfig.org
  # 4 space indentation
  [*.py]
  indent_style = space
- indent_size = 4
+ indent_size = 2
 
  # Tab indentation (no size specified)
  [*.js]

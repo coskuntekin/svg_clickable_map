@@ -3,82 +3,86 @@
 //------------------------------------
 
 body
-    background-color: #ddd
+  background-color: #ddd
+  color: darken(#ddd, 30%)
 
 .svg-map
-    position: relative
-    top: 0
-    right: 0
-    bottom: 0
+  position: relative
+  top: 0
+  right: 0
+  bottom: 0
+  float: left
+  width: 100%
+  height: 100%
 
 .map-marker
-    position: absolute
-    +opacity(0)
-    +transform(translate3d(0, -100px, 0))
-    z-index: 2
-    color: #A94442
-    +transition(transform, 100ms, ease-in, position, 100ms, linear)
-    &.active
-        +opacity(1)
-        +transform(translate3d(0, 0, 0))
-        +transition(transform, 500ms, ease-out, position, 500ms, linear)
+  position: absolute
+  +opacity(0)
+  +transform(translate3d(0, -100px, 0))
+  z-index: 2
+  color: #A94442
+  +transition(transform, 100ms, ease-in, position, 100ms, linear)
+  &.active
+    +opacity(1)
+    +transform(translate3d(0, 0, 0))
+    +transition(transform, 500ms, ease-out, position, 500ms, linear)
 
 .map-marker
-    &[data-city='xiuwen']
-        top: 220px
-        right: 350px
-    &[data-city='xifeng']
-        top: 110px
-        right: 310px
-    &[data-city='kaiyang']
-        top: 120px
-        right: 150px
-    &[data-city='wudang']
-        top: 310px
-        right: 190px
-    &[data-city='qingzhen']
-        top: 340px
-        right: 450px
-    &[data-city='baiyun']
-        top: 335px
-        right: 295px
-    &[data-city='guanshanhu']
-        top: 390px
-        right: 350px
-    &[data-city='yunyan']
-        top: 420px
-        right: 275px
-    &[data-city='nanming']
-        top: 450px
-        right: 248px
-    &[data-city='huaxi']
-        top: 525px
-        right: 300px
+  &[data-city='xiuwen']
+    top: 180px
+    right: 320px
+  &[data-city='xifeng']
+    top: 60px
+    right: 290px
+  &[data-city='kaiyang']
+    top: 100px
+    right: 175px
+  &[data-city='wudang']
+    top: 230px
+    right: 205px
+  &[data-city='qingzhen']
+    top: 280px
+    right: 400px
+  &[data-city='baiyun']
+    top: 255px
+    right: 285px
+  &[data-city='guanshanhu']
+    top: 305px
+    right: 310px
+  &[data-city='yunyan']
+    top: 320px
+    right: 270px
+  &[data-city='nanming']
+    top: 355px
+    right: 250px
+  &[data-city='huaxi']
+    top: 390px
+    right: 290px
 
 .map-loading-layout
-    min-height: 500px
+  min-height: 500px
 
 .map-loading-widget
-    position: absolute
-    top: 50%
-    left: 50%
-    +transform(translate(-50%, -50%))
+  position: absolute
+  top: 50%
+  left: 50%
+  +transform(translate(-50%, -50%))
 
 .thumbnail-popup
-    +transition(box-shadow,300ms,ease-out)
-    &:focus,
-    &:hover
-        +box-shadow(0 0 8px rgba(0,0,0,0.18),0 8px 16px rgba(0,0,0,0.36))
-        +transition(box-shadow,300ms,ease-in)
+  +transition(box-shadow, 300ms, ease-out)
+  &:focus,
+  &:hover
+    +box-shadow(0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36))
+    +transition(box-shadow, 300ms, ease-in)
 
 .img-invert
-    +animation-duration(1s)
-    +animation-direction(alternate)
-    &.animate-name
-        +animation-name(imgInvert)
+  +animation-duration(1s)
+  +animation-direction(alternate)
+  &.animate-name
+    +animation-name(imgInvert)
 
 +keyframes(imgInvert)
-    0%
-        +filter(brightness(1000%))
-    100%
-        +filter(brightness(100%))
+  0%
+    +filter(brightness(1000%))
+  100%
+    +filter(brightness(100%))
