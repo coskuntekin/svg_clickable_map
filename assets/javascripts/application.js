@@ -1,44 +1,42 @@
 // Avoid `console` errors in browsers that lack a console.
-	(function() {
-		var method;
-		var noop = function () {};
-		var methods = [
-			'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
-			'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
-			'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
-			'timeline', 'timelineEnd', 'timeStamp', 'trace', 'warn'
-		];
-		var length = methods.length;
-		var console = (window.console = window.console || {});
+(function () {
+	var method;
+	var noop = function () {
+	};
+	var methods = [
+		'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
+		'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
+		'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
+		'timeline', 'timelineEnd', 'timeStamp', 'trace', 'warn'
+	];
+	var length = methods.length;
+	var console = (window.console = window.console || {});
 
-		while (length--) {
-			method = methods[length];
+	while (length--) {
+		method = methods[length];
 
-			// Only stub undefined methods.
-			if (!console[method]) {
-				console[method] = noop;
-			}
+		// Only stub undefined methods.
+		if (!console[method]) {
+			console[method] = noop;
 		}
-	}());
+	}
+}());
 
 // Place any jQuery/helper plugins in here.
 
-$(window).load(function(){
+$(window).load(function () {
 
 	var g = Snap('#svg');
 	g.attr({
-		viewBox: [0, 0, 750, 980]
+		viewBox: [-2, 0, 14, 14]
 	});
 
 	Snap.load("assets/images/guiyang.svg", function (f) {
 
-		//
-		//#### Map Loading Function
-		//----------------------------
+		g.append(f);
+
 		$('.js-map-layout').removeClass('hidden');
 		$('.js-map-loading').addClass('hidden');
-
-		g.append(f);
 
 		var jsMapPin = $('.js-map-marker');
 		var jsImgCity = $('.js-img-city');
@@ -59,8 +57,9 @@ $(window).load(function(){
 						src: imageRoots + city + '.jpg'
 					});
 					jsImgCity.addClass('animate-name');
-					$('.js-path-name').text(" / "+city)
+					$('.js-path-name').text(" / " + city)
 				}
+
 				jsImgCity.removeClass('animate-name');
 				setTimeout(imgCity, 500);
 			});
@@ -76,11 +75,6 @@ $(window).load(function(){
 		xiuwenPath.animate({
 			fill: '#B3E5FC'
 		}, 1100);
-
-		var xiuwenTxt = g.text(230, 390, "修文县").attr({
-			fontSize: "30px",
-			fill: "#333"
-		});
 
 		xiuwenPath.click(function () {
 			active = 1;
@@ -126,11 +120,6 @@ $(window).load(function(){
 		//----------------------------
 
 		var xifengPath = g.select("#xifeng");
-
-		var xifengTxt = g.text(280, 230, "息烽县").attr({
-			fontSize: "30px",
-			fill: "#333"
-		});
 
 		xifengPath.click(function () {
 			active = 2;
@@ -181,11 +170,6 @@ $(window).load(function(){
 
 		var kaiyangPath = g.select("#kaiyang");
 
-		var kaiyangTxt = g.text(500, 250, "开阳县").attr({
-			fontSize: "30px",
-			fill: "#333"
-		});
-
 		kaiyangPath.click(function () {
 			active = 3;
 			if (active === 3) {
@@ -234,11 +218,6 @@ $(window).load(function(){
 		//----------------------------
 
 		var wudangPath = g.select("#wudang");
-
-		var wudangTxt = g.text(450, 500, "乌当区").attr({
-			fontSize: "30px",
-			fill: "#333"
-		});
 
 		mapPathClick(wudangPath, 'wudang');
 
@@ -289,11 +268,6 @@ $(window).load(function(){
 
 		var qingzhenPath = g.select("#qingzhen");
 
-		var qingzhenTxt = g.text(80, 550, "清镇市").attr({
-			fontSize: "30px",
-			fill: "#333"
-		});
-
 		mapPathClick(qingzhenPath, 'qingzhen');
 
 		qingzhenPath.animate({
@@ -342,11 +316,6 @@ $(window).load(function(){
 		//----------------------------
 
 		var baiyunPath = g.select("#baiyun");
-
-		var baiyunTxt = g.text(315, 530, "白云区").attr({
-			fontSize: "25px",
-			fill: "#333"
-		});
 
 		mapPathClick(baiyunPath, 'baiyun');
 
@@ -397,11 +366,6 @@ $(window).load(function(){
 
 		var guanshanhuPath = g.select("#guanshanhu");
 
-		var guanshanhuTxt = g.text(250, 610, "观山湖区").attr({
-			fontSize: "20px",
-			fill: "#333"
-		});
-
 		mapPathClick(guanshanhuPath, 'guanshanhu');
 
 		guanshanhuPath.animate({
@@ -450,11 +414,6 @@ $(window).load(function(){
 		//----------------------------
 
 		var yunyanPath = g.select("#yunyan");
-
-		var yunyanTxt = g.text(358, 640, "云岩区	").attr({
-			fontSize: "15px",
-			fill: "#333"
-		});
 
 		mapPathClick(yunyanPath, 'yunyan');
 
@@ -505,11 +464,6 @@ $(window).load(function(){
 
 		var nanmingPath = g.select("#nanming");
 
-		var nanmingTxt = g.text(390, 680, "云岩区	").attr({
-			fontSize: "20px",
-			fill: "#333"
-		});
-
 		mapPathClick(nanmingPath, 'nanming');
 
 		nanmingPath.animate({
@@ -558,11 +512,6 @@ $(window).load(function(){
 		//----------------------------
 
 		var huaxiPath = g.select("#huaxi");
-
-		var huaxiTxt = g.text(300, 800, "花溪区").attr({
-			fontSize: "30px",
-			fill: "#333"
-		});
 
 		huaxiPath.click(function () {
 			active = 10;

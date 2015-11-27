@@ -1,12 +1,15 @@
 body {
   background-color: #ddd;
-}
+  color: #919191; }
 
 .svg-map {
   position: relative;
   top: 0;
   right: 0;
-  bottom: 0; }
+  bottom: 0;
+  float: left;
+  width: 100%;
+  height: 100%; }
 
 .map-marker {
   position: absolute;
@@ -52,45 +55,35 @@ body {
 }
 
 .map-marker[data-city='xiuwen'] {
-  top: 220px;
-  right: 350px;
-}
+  top: 180px;
+  right: 320px; }
 .map-marker[data-city='xifeng'] {
-  top: 110px;
-  right: 310px;
-}
+  top: 60px;
+  right: 290px; }
 .map-marker[data-city='kaiyang'] {
-  top: 120px;
-  right: 150px;
-}
+  top: 100px;
+  right: 175px; }
 .map-marker[data-city='wudang'] {
-  top: 310px;
-  right: 190px;
-}
+  top: 230px;
+  right: 205px; }
 .map-marker[data-city='qingzhen'] {
-  top: 340px;
-  right: 450px;
-}
+  top: 280px;
+  right: 400px; }
 .map-marker[data-city='baiyun'] {
-  top: 335px;
-  right: 295px;
-}
+  top: 255px;
+  right: 285px; }
 .map-marker[data-city='guanshanhu'] {
-  top: 390px;
-  right: 350px;
-}
+  top: 305px;
+  right: 310px; }
 .map-marker[data-city='yunyan'] {
-  top: 420px;
-  right: 275px;
-}
+  top: 320px;
+  right: 270px; }
 .map-marker[data-city='nanming'] {
-  top: 450px;
-  right: 248px;
-}
+  top: 355px;
+  right: 250px; }
 .map-marker[data-city='huaxi'] {
-  top: 525px;
-  right: 300px;
-}
+  top: 390px;
+  right: 290px; }
 
 .img-invert {
   -moz-animation-duration: 1s;
