@@ -35,14 +35,24 @@ end
 # Development Environment
 configure :development do
 
+  #To activate the middleman-sprockets
+  require 'sprockets/es6'
+  activate :sprockets do |s|
+    s.supported_output_extensions << '.es6'
+  end
+  
   # Automatic image dimensions on image_tag helpers
   activate :automatic_image_sizes
 
+  # Autoprefixer
+  activate :autoprefixer do |prefix|
+    prefix.browsers = "last 1 versions"
+  end
+
   # Reload the browser automatically whenever files change
-  activate :livereload
+  activate :livereload, :no_swf => true
 
   # Assets Pipeline Sets
-  set :haml, {ugly: false, format: :html5}
   set :css_dir, 'assets/stylesheets'
   set :js_dir, 'assets/javascripts'
   set :images_dir, 'assets/images'
@@ -56,15 +66,32 @@ end
 # Build Environment
 configure :build do
 
+  #To activate the middleman-sprockets
+  require 'sprockets/es6'
+  activate :sprockets do |s|
+    s.supported_output_extensions << '.es6'
+  end
+
+  # Autoprefixer
+  activate :autoprefixer do |prefix|
+    prefix.browsers = "last 1 versions"
+  end
+
   # Minify CSS on build
   activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
 
   # GZIP text files
   # activate :gzip
 
+  # Append a hash to asset urls (make sure to use the url helpers)
+  # activate :asset_hash
+
+  # Use relative URLs
+  activate :relative_assets
+  
 end
 
 # Production Environment
@@ -80,4 +107,3 @@ configure :production do
   # 'middleman server -e production'
 
 end
-
