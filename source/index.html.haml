@@ -1,16 +1,16 @@
 -@title= 'SVG Clickable Map'
 -@page_classes= 'home'
 
-%main{role:'main'}
-  %header
-    .page-header.text-center
-      %h1
-        SVG Clickable Map
-      .subhead
-        =link_to 'Snap.svg', 'https://github.com/adobe-webplatform/Snap.svg'
-  %section
+%header{class: 'header'}
+  .page-header.text-center
+    %h1
+      SVG Clickable Map
+    .subhead
+      =link_to 'Snap.svg', 'https://github.com/adobe-webplatform/Snap.svg'
+%main{role: 'main', class: 'main'}
+  %section{class:'layout layout-left'}
     .thumbnail.thumbnail-popup
-      =image_tag ('guiyang.jpg'), class:'js-img-city img-invert'
+      =image_tag ('guiyang.jpg'), class:'img-responsive js-img-city img-invert'
     .caption.text-center
       %h3
         Guiyang
@@ -18,10 +18,5 @@
     %p
       =link_to 'Map Source - ', 'https://en.wikipedia.org/wiki/Guiyang'
       =link_to 'Image Source', 'https://unsplash.com/'
-  %section
-    .js-map-loading.map-loading-layout
-    .map-loading-widget
-      %i.fa.fa-spinner.fa-pulse.fa-2x
-    .col-lg-6.js-map-layout.hidden
-      %i.js-map-marker{'data-city':''}
-      %svg.svg-map#svg
+  %section{class:'layout layout-right'}
+    %svg.svg-map#svg
