@@ -6,9 +6,6 @@ It's interactive SVG map.
 
 You can check [here](https://en.wikipedia.org/wiki/Guiyang)
 
-### Demo
-Preview is [here](http://coskuntekin.github.io/svg_clickable_map/)
-
 ### What's Include
 
 It's using [Snap.svg](http://snapsvg.io/) and it's build on middleman. But if you want only HTML version please check `gh-pages` branch.
@@ -36,6 +33,3 @@ It's using [Snap.svg](http://snapsvg.io/) and it's build on middleman. But if yo
   * [x] ~~Optimize SVG file~~
   * [x] ~~Add loading for SVG file~~
   
-### Change Log
-  * Optimized SVG image
-  * Fixed map marker positions
