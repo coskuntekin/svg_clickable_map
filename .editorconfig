@@ -20,7 +20,7 @@ i# EditorConfig is awesome: http://EditorConfig.org
 
  # Tab indentation (no size specified)
  [*.js]
- indent_style = tab
+ indent_style = space
 
  # Indentation override for all JS under lib directory
  [lib/**.js]
@@ -30,4 +30,4 @@ i# EditorConfig is awesome: http://EditorConfig.org
  # Matches the exact files either package.json or .travis.yml
  [{package.json,.travis.yml}]
  indent_style = space
- indent_size =
+ indent_size = 2

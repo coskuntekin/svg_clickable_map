@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='en-GB'>
+<html lang=''>
 
 <head>
   <meta charset='utf-8'>
@@ -9,7 +9,7 @@
   </title>
   <meta content='' name='description'>
   <meta content='width=device-width, initial-scale=1' name='viewport'>
-  <link href="assets/stylesheets/application.css?v0.1.2" rel="stylesheet" />
+  <link href="assets/stylesheets/application.css" rel="stylesheet" />
   <link href='favicon.ico' rel='icon' type='image/x-icon'>
 </head>
 
@@ -44,13 +44,18 @@
     </section>
     <section class='layout layout-right js-map-loading map-loading-layout'>
       <div class='map-layout js-map-layout'>
+        <div class='is-loading js-is-loading'>
+          <p>
+            Loading ....
+          </p>
+        </div>
         <svg class='svg-map' id='svg'></svg>
       </div>
     </section>
   </main>
-  
-  <script src="https://cdn.bootcss.com/snap.svg/0.4.1/snap.svg-min.js"></script>
-  <script src="assets/javascripts/application.js?v0.1.2"></script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
+  <script src="assets/javascripts/application.js"></script>
 
 </body>
 
