@@ -3,62 +3,31 @@
 //------------------------------------
 
 body
-  background-color: #ddd
-  color: darken(#ddd, 30%)
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
 
-.svg-map
+*,
+*::before,
+*::after
+  box-sizing: border-box
+
+.map-layout
   position: relative
-  top: 0
-  right: 0
-  bottom: 0
-  float: left
+  display: block
   width: 100%
   height: 100%
 
 .map-marker
   position: absolute
-  +opacity(0)
-  +transform(translate3d(0, -100px, 0))
+  opacity: 0
+  transform: translate3d(0, -100px, 0)
   z-index: 2
   color: #A94442
-  +transition(transform, 100ms, ease-in, position, 100ms, linear)
+  transition: transform 100ms ease-in, top 100ms linear, right 100ms linear
   &.active
-    +opacity(1)
-    +transform(translate3d(0, 0, 0))
-    +transition(transform, 500ms, ease-out, position, 500ms, linear)
-
-.map-marker
-  &[data-city='xiuwen']
-    top: 180px
-    right: 320px
-  &[data-city='xifeng']
-    top: 60px
-    right: 290px
-  &[data-city='kaiyang']
-    top: 100px
-    right: 175px
-  &[data-city='wudang']
-    top: 230px
-    right: 205px
-  &[data-city='qingzhen']
-    top: 280px
-    right: 400px
-  &[data-city='baiyun']
-    top: 255px
-    right: 285px
-  &[data-city='guanshanhu']
-    top: 305px
-    right: 310px
-  &[data-city='yunyan']
-    top: 320px
-    right: 270px
-  &[data-city='nanming']
-    top: 355px
-    right: 250px
-  &[data-city='huaxi']
-    top: 390px
-    right: 290px
-
+    opacity: 1
+    transform: translate3d(0, 0, 0)
+    transition: transform 500ms ease-out, top 500ms linear, right 500ms linear
+  
 .map-loading-layout
   min-height: 500px
 
@@ -66,23 +35,81 @@ body
   position: absolute
   top: 50%
   left: 50%
-  +transform(translate(-50%, -50%))
+  transform: translate(-50% -50%)
 
 .thumbnail-popup
-  +transition(box-shadow, 300ms, ease-out)
+  transition: box-shadow 300ms ease-out
   &:focus,
   &:hover
-    +box-shadow(0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36))
-    +transition(box-shadow, 300ms, ease-in)
+    box-shadow: 0 0 8px rgba(0,0,0,0.18), 0 8px 16px rgba(0,0,0,0.36)
+    transition: box-shadow 300ms ease-in
 
 .img-invert
-  +animation-duration(1s)
-  +animation-direction(alternate)
+  animation-duration: 1s
+  animation-direction: alternate
   &.animate-name
-    +animation-name(imgInvert)
+    animation-name: imgInvert
 
-+keyframes(imgInvert)
+@keyframes imgInvert
   0%
-    +filter(brightness(1000%))
+    filter: brightness(1000%)
   100%
-    +filter(brightness(100%))
+    filter: brightness(100%)
+
+.text-center
+  text-align: center  
+
+.img-responsive
+  display: block
+  max-width: 100%
+  height: auto
+
+.header
+  display: block
+  padding:
+    top: 2rem
+    left: 2rem
+    right: 2rem
+  & h1
+    font-size: 3rem
+    margin-bottom: 1rem
+
+.page-header
+  border-bottom: 1px solid #f1f1f1
+  padding-bottom: 2rem
+
+a
+  color: #0336ff
+  font-weight: bold
+  text-decoration: none
+  &:hover,
+  &:focus
+    color: darken(#0336ff, 10%)
+
+.main
+  display: grid
+  grid-template-columns: repeat(1,1fr)
+  grid-gap: 2rem
+  padding: 2rem
+
+.thumbnail
+  padding: 2rem
+  border: 1px solid #f1f1f1
+
+.icon-svg
+  display: inline-block
+  width: 1em
+  height: 1em
+
+.x2
+  font-size: 2rem
+
+.svg-layout
+  display: block
+  width: 100%
+  height: 500px
+
+@supports (display: grid)
+  @media (min-width: 42em) and (min-height: 27em)
+    .main
+      grid-template-columns: repeat(2,1fr)
