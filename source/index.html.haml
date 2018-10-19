@@ -11,12 +11,15 @@
   %section{class:'layout layout-left'}
     .thumbnail.thumbnail-popup
       =image_tag ('guiyang.jpg'), class:'img-responsive js-img-city img-invert'
-    .caption.text-center
-      %h3
-        Guiyang
-    %snap.js-path-name
-    %p
-      =link_to 'Map Source - ', 'https://en.wikipedia.org/wiki/Guiyang'
-      =link_to 'Image Source', 'https://unsplash.com/'
-  %section{class:'layout layout-right'}
-    %svg.svg-map#svg
+      .caption.text-center
+        %h3
+          贵阳
+          %snap.js-path-name
+        %p
+          =link_to 'Map Source', 'https://en.wikipedia.org/wiki/Guiyang'
+          %small -
+          =link_to 'Image Source', 'https://unsplash.com/'
+  %section{class:'layout layout-right js-map-loading map-loading-layout'}
+    .map-layout.js-map-layout        
+      %svg{id:'svg', class:'svg-map'}
+

@@ -36,19 +36,8 @@ end
 configure :development do
 
   #To activate the middleman-sprockets
-  require 'sprockets/es6'
-  activate :sprockets do |s|
-    s.supported_output_extensions << '.es6'
-  end
+  activate :sprockets
   
-  # Automatic image dimensions on image_tag helpers
-  activate :automatic_image_sizes
-
-  # Autoprefixer
-  activate :autoprefixer do |prefix|
-    prefix.browsers = "last 1 versions"
-  end
-
   # Reload the browser automatically whenever files change
   activate :livereload, :no_swf => true
 
@@ -71,6 +60,9 @@ configure :build do
   activate :sprockets do |s|
     s.supported_output_extensions << '.es6'
   end
+
+  # Automatic image dimensions on image_tag helpers
+  activate :automatic_image_sizes
 
   # Autoprefixer
   activate :autoprefixer do |prefix|

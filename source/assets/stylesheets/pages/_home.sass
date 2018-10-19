@@ -5,56 +5,29 @@
 body
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"
 
-.svg-map
+*,
+*::before,
+*::after
+  box-sizing: border-box
+
+.map-layout
   position: relative
-  top: 0
-  right: 0
-  bottom: 0
+  display: block
+  width: 100%
+  height: 100%
 
 .map-marker
   position: absolute
   opacity: 0
-  transform: translate3d(0 -100px 0)
+  transform: translate3d(0, -100px, 0)
   z-index: 2
   color: #A94442
-  transition: transform 100ms ease-in position 100ms linear
+  transition: transform 100ms ease-in, top 100ms linear, right 100ms linear
   &.active
     opacity: 1
-    transform: translate3d(0 0 0)
-    transition: transform 500ms ease-out position 500ms linear
-
-.map-marker
-  &[data-city='xiuwen']
-    top: 220px
-    right: 350px
-  &[data-city='xifeng']
-    top: 110px
-    right: 310px
-  &[data-city='kaiyang']
-    top: 120px
-    right: 150px
-  &[data-city='wudang']
-    top: 310px
-    right: 190px
-  &[data-city='qingzhen']
-    top: 340px
-    right: 450px
-  &[data-city='baiyun']
-    top: 335px
-    right: 295px
-  &[data-city='guanshanhu']
-    top: 390px
-    right: 350px
-  &[data-city='yunyan']
-    top: 420px
-    right: 275px
-  &[data-city='nanming']
-    top: 450px
-    right: 248px
-  &[data-city='huaxi']
-    top: 525px
-    right: 300px
-
+    transform: translate3d(0, 0, 0)
+    transition: transform 500ms ease-out, top 500ms linear, right 500ms linear
+  
 .map-loading-layout
   min-height: 500px
 
@@ -93,12 +66,50 @@ body
 
 .header
   display: block
+  padding:
+    top: 2rem
+    left: 2rem
+    right: 2rem
+  & h1
+    font-size: 3rem
+    margin-bottom: 1rem
+
+.page-header
+  border-bottom: 1px solid #f1f1f1
+  padding-bottom: 2rem
+
+a
+  color: #0336ff
+  font-weight: bold
+  text-decoration: none
+  &:hover,
+  &:focus
+    color: darken(#0336ff, 10%)
 
 .main
   display: grid
-  grid-template-columns: repeat(2,1fr)
+  grid-template-columns: repeat(1,1fr)
   grid-gap: 2rem
+  padding: 2rem
 
 .thumbnail
   padding: 2rem
+  border: 1px solid #f1f1f1
 
+.icon-svg
+  display: inline-block
+  width: 1em
+  height: 1em
+
+.x2
+  font-size: 2rem
+
+.svg-layout
+  display: block
+  width: 100%
+  height: 500px
+
+@supports (display: grid)
+  @media (min-width: 42em) and (min-height: 27em)
+    .main
+      grid-template-columns: repeat(1,1fr)
