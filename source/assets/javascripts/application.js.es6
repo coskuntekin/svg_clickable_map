@@ -113,15 +113,19 @@ const pathMap = [
 	}
 ];
 
+let querySelector = document.querySelector.bind(document);
+
 document.addEventListener('DOMContentLoaded', () => {
+
+  const isLoading = querySelector('.js-is-loading');
 
 	const g = Snap('#svg');
 	g.attr({ viewBox: [0, 0, 750, 980] });
 
 	Snap.load('assets/images/guiyang.svg', (f) => {
 
-		let querySelector = document.querySelector.bind(document);
-
+    isLoading.classList.add('hidden');
+    
 		g.append(f);
 
 		const jsImgCity = querySelector('.js-img-city');

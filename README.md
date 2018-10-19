@@ -24,6 +24,8 @@ But if you need only HTML version please check `gh-pages` branch.
   - Removed unnecessary javascript code blocks
   - Optimized SVG
   - Adaptive to responsive view
+  - Removed Bootstrap
+  - Removed FontAwesome
 
 ### ToDo List
   * [ ] Create popover on each path
