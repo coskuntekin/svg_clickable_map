@@ -18,6 +18,11 @@ But if you need only HTML version please check `gh-pages` branch.
 
 ### Changelog
 
+[13/11/2018]
+
+  - Optimized images
+  - Used Fetch API
+
 [19/10/2018]
 
   - Removed jQuery
@@ -28,6 +33,7 @@ But if you need only HTML version please check `gh-pages` branch.
   - Removed FontAwesome
 
 ### ToDo List
+
   * [ ] Create popover on each path
   * [x] ~~Optimize SVG file~~
   * [x] ~~Add loading for SVG file~~
