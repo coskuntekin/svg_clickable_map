@@ -1,62 +1,58 @@
 <!DOCTYPE html>
 <html lang=''>
-
 <head>
-  <meta charset='utf-8'>
-  <meta content='ie=edge' http-equiv='x-ua-compatible'>
-  <title>
-    SVG Clickable Map
-  </title>
-  <meta content='' name='description'>
-  <meta content='width=device-width, initial-scale=1' name='viewport'>
-  <link href="assets/stylesheets/application.css" rel="stylesheet" />
-  <link href='favicon.ico' rel='icon' type='image/x-icon'>
+<meta charset='utf-8'>
+<meta content='ie=edge' http-equiv='x-ua-compatible'>
+<title>
+SVG Clickable Map
+</title>
+<meta content='' name='description'>
+<meta content='width=device-width, initial-scale=1' name='viewport'>
+<link href="assets/stylesheets/application.css" rel="stylesheet" />
+<link href='favicon.ico' rel='icon' type='image/x-icon'>
 </head>
-
 <body class='home'>
 
-  <header class='header'>
-    <div class='page-header text-center'>
-      <h1>
-        SVG Clickable Map
-      </h1>
-      <div class='subhead'>
-        <a href="https://github.com/adobe-webplatform/Snap.svg">Snap.svg</a>
-      </div>
-    </div>
-  </header>
-  <main class='main' role='main'>
-    <section class='layout layout-left'>
-      <div class='thumbnail thumbnail-popup'>
-        <img src="assets/images/guiyang.jpg" class="img-responsive js-img-city img-invert" width="960" height="639" alt="Guiyang" />
-        <div class='caption text-center'>
-          <h3>
-            贵阳
-            <snap class='js-path-name'></snap>
-          </h3>
-          <p>
-            <a href="https://en.wikipedia.org/wiki/Guiyang">Map Source</a>
-            <small>-</small>
-            <a href="https://unsplash.com/">Image Source</a>
-          </p>
-        </div>
-      </div>
-    </section>
-    <section class='layout layout-right js-map-loading map-loading-layout'>
-      <div class='map-layout js-map-layout'>
-        <div class='is-loading js-is-loading'>
-          <p>
-            Loading ....
-          </p>
-        </div>
-        <svg class='svg-map' id='svg'></svg>
-      </div>
-    </section>
-  </main>
+<header class='header'>
+<div class='page-header text-center'>
+<h1>
+SVG Clickable Map
+</h1>
+<div class='subhead'>
+<a href="https://github.com/adobe-webplatform/Snap.svg">Snap.svg</a>
+</div>
+</div>
+</header>
+<main class='main' role='main'>
+<section class='layout layout-left'>
+<div class='thumbnail thumbnail-popup'>
+<img src="assets/images/guiyang.jpg" class="img-responsive js-img-city img-invert" width="960" height="639" alt="Guiyang" />
+<div class='caption text-center'>
+<h3>
+贵阳
+<snap class='js-path-name'></snap>
+</h3>
+<p>
+<a href="https://en.wikipedia.org/wiki/Guiyang">Map Source</a>
+<small>-</small>
+<a href="https://unsplash.com/">Image Source</a>
+</p>
+</div>
+</div>
+</section>
+<section class='layout layout-right js-map-loading map-loading-layout'>
+<div class='map-layout js-map-layout'>
+<div class='is-loading js-is-loading'>
+<p>
+Loading ....
+</p>
+</div>
+<svg class='svg-map' id='svg'></svg>
+</div>
+</section>
+</main>
 
-  <script src="//cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
-  <script src="assets/javascripts/application.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script><script src="assets/javascripts/application.js"></script>
 
 </body>
-
 </html>
