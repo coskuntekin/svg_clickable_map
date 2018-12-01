@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     function drawMap() {
-      const url = '../assets/javascripts/data/path.json';
+      const url = 'assets/javascripts/data/path.json';
       fetch(url).then((response) => {
         return response.json();
       }).then((data) => {
@@ -41,11 +41,11 @@ document.addEventListener('DOMContentLoaded', () => {
           g.select(element.selector).click(() => {
             g.select(element.selector).animate({ fill: 'white' }, 400);
             data.forEach((element) => {
-              if (element.isClicked === false) g.select(element.selector).attr({ fill: element.color });
+              if (!element.isClicked) g.select(element.selector).attr({ fill: element.color });
             });
           });
           mapPathClick(element.selector, element.text);
-          g.select(element.selector).animate({ fill: element.color }, (1000 + (100 * index)), mina.bounce);
+          g.select(element.selector).animate({ fill: element.color, stroke: '#333' }, (1000 + (100 * index)), mina.bounce);
         });
       }).catch((error) => {
         console.error(error);
