@@ -39,10 +39,7 @@ But if you need only HTML version please check `gh-pages` branch.
 
 ### ToDo List
 
-<<<<<<< HEAD
-=======
   * [ ] Remove Snap.svg
->>>>>>> develop
   * [ ] Create popover on each path
   * [x] ~~Optimize SVG file~~
   * [x] ~~Add loading for SVG file~~
