@@ -4,12 +4,12 @@ It's interactive SVG map.
 
 ### What's Include
 
-It's using [Snap.svg](http://snapsvg.io/) and it's build on **middleman**. 
+It's using [Snap.svg](http://snapsvg.io/) and it's build on **middleman**.
 But if you need only HTML version please check `gh-pages` branch.
 
   * HAML
   * Sass
-  * Support EcmaScript6 
+  * Support EcmaScript6
   * ~~Bootstrap~~
   * Snap.svg
   * ~~jQuery~~
@@ -17,6 +17,11 @@ But if you need only HTML version please check `gh-pages` branch.
   * [Map Source](https://en.wikipedia.org/wiki/Guiyang)
 
 ### Changelog
+
+[01/12/2018]
+  
+  - Added stroke
+  - Fixed Fetch API url
 
 [13/11/2018]
 
@@ -34,6 +39,10 @@ But if you need only HTML version please check `gh-pages` branch.
 
 ### ToDo List
 
+<<<<<<< HEAD
+=======
+  * [ ] Remove Snap.svg
+>>>>>>> develop
   * [ ] Create popover on each path
   * [x] ~~Optimize SVG file~~
   * [x] ~~Add loading for SVG file~~
